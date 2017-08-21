@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+declare var jquery: any;
+declare var $: any;
 
 @Component({
   selector: 'app-business-card-directory',
@@ -10,6 +12,10 @@ export class BusinessCardDirectoryComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    $(function () {
+        console.log('jquery app-business-card-directory is OK');
+        /*$('#myModal').modal();*/
+    });
   }
 
 }
